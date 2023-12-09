@@ -5,7 +5,7 @@ function Admin() {
     const [dataitem, setDataitem] = useState([]);
     useEffect(() => {
         const dataitem1 = localStorage.getItem("data");
-        setDataitem(JSON.parse(dataitem1) || []);
+        setDataitem(JSON.parse(dataitem1) ||     []);
     }, []);
   return (
     <>
