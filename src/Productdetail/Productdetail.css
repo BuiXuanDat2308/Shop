@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.card-wrapper11{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.img-display11{
+    overflow: hidden;
+}
+.img-showcase11{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase11 img{
+    min-width: 100%;
+}
+.img-select11{
+    display: flex;
+}
+.img-item11{
+    margin: 0.3rem;
+}
+.img-item11:nth-child(1),
+.img-item11:nth-child(2),
+.img-item11:nth-child(3){
+    margin-right: 0;
+}
+.img-item11:hover{
+    opacity: 0.8;
+}
+.product-content11{
+    padding: 2rem 1rem;
+}
+.product-title11{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title11::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.product-link11{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link11:hover{
+    opacity: 0.9;
+}
+.product-rating11{
+    color: #ffc107;
+}
+.product-rating11 span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price11{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price11 span{
+    font-weight: 400;
+}
+.last-price11 span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price11 span{
+    color: #256eff;
+}
+.product-detail11 h2{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail11 p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail11 ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail11 ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail11 ul li span{
+    font-weight: 400;
+}
+.purchase-info11{
+    margin: 1.5rem 0;
+}
+.purchase-info11 input,
+.purchase-info11 .btn11{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info11 input{
+    width: 60px;
+}
+.purchase-info11 .btn11{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info11 .btn11:first-of-type{
+    background: #256eff;
+}
+.purchase-info11 .btn11:last-of-type{
+    background: #f64749;
+}
+.purchase-info11 .btn11:hover{
+    opacity: 0.9;
+}
+.social-links11{
+    display: flex;
+    align-items: center;
+}
+.social-links11 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links11 a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px){
+    .card11{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper11{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs11{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content11{
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,95 @@
+/* Thêm padding cho toàn bộ payment container */
+.payment-container {
+    padding: 20px;
+}
+
+/* Dùng flex để căn giữa và tạo khoảng cách giữa các phần tử trong heading */
+.payment-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Tăng kích thước font và cân nặng chữ */
+.payment-heading-text {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Dùng cursor là pointer khi hover icon */
+.payment-heading-icon {
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    /* Thay đổi màu icon nếu cần */
+}
+
+/* Dùng flex để căn giữa và thêm khoảng cách giữa text và giá tiền */
+/* Điều chỉnh container của tổng giá tiền để căn giữa */
+.total-and-checkout {
+    display: flex;
+    flex-direction: column;
+    /* Để đảm bảo tổng giá tiền và nút Checkout nằm dưới nhau */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Điều chỉnh tổng giá tiền để nó nằm giữa trên trục ngang */
+.total-price-container {
+    text-align: center;
+}
+
+/* Thêm padding cho nút Checkout và đưa nó về giữa */
+.checkout-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    /* Thay đổi padding */
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Thay đổi màu khi hover cho nút Checkout */
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+.no-product-container {
+    text-align: center;
+    margin: 20px;
+    /* Adjust the margin as needed */
+}
+
+/* Style for the "No product" message */
+.no-product-message {
+    font-size: 18px;
+    color: #555;
+    /* Adjust the color as needed */
+    margin-bottom: 10px;
+}
+
+/* Style for the "Continue Shopping" button */
+.continue-shopping-button {
+    background-color: #3498db;
+    /* Adjust the background color as needed */
+    color: #fff;
+    /* Adjust the text color as needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to the button */
+.continue-shopping-button:hover {
+    background-color: #2980b9;
+    /* Adjust the hover background color as needed */
+}
