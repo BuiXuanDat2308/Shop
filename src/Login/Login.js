@@ -13,7 +13,11 @@ const handleLogin = async () => {
   
     await localStorage.setItem('isLogined', true);
     await navigate('/home');
-  }else{
+  }else if(username === 'admin' && password === '123' ){
+    await localStorage.setItem('isLogined', true);
+    await navigate('/admin');
+  }
+  else{
     setError("Sai mật khậu hoặc tên đăng nhập")
   }
 };

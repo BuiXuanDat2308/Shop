@@ -146,7 +146,7 @@ function App() {
           <Route path="*" element={<h1>Unauthorized</h1>} />
 
           <Route path="/payment" element={<PrivateRoute><Payment /></PrivateRoute>} />
-          <Route path='/admin' element = {<Admin/>}/>
+          <Route path='/admin' element = {<PrivateRoute><Admin /></PrivateRoute>}/>
         </Routes>
       </ItemProvider>
     </Router>

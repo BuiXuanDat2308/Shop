@@ -1,0 +1,98 @@
+/* Admin.css */
+
+.admin-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-toolbar {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.add-product-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-product-form {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.add-product-form h3 {
+  margin-bottom: 10px;
+}
+
+.add-product-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-product-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.add-product-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.admin-row {
+  margin-bottom: 20px;
+}
+
+/* MiniProductAdmin.css */
+
+.mini-product-admin {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 10px;
+  align-items: center;
+}
+
+.product-id {
+  flex: 1;
+  font-weight: bold;
+}
+
+.product-image {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.product-price {
+  font-weight: bold;
+}
+.admin-navbar{
+  height: 100px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  position: relative;
+}
+.icon-admin{
+  position: absolute;
+  right: 330px;
+  top: 60px;
+}

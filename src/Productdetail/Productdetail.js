@@ -13,7 +13,13 @@ function Productdetail() {
   const [quantityProduct, setQuantityProduct] = useState(0);
 
   useEffect(() => {
-    setProductData(JSON.parse(data)[params.id - 1]);
+    const x = JSON.parse(data)
+    x.map(item=>{
+      if(params.id == item.id){
+        setProductData(item);
+      }
+    })
+    //setProductData(JSON.parse(data)[params.id - 1]);
 
     // }
   }, []);

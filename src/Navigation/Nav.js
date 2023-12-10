@@ -13,7 +13,6 @@ export default function Nav({ handleInputChange, query }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Hiển thị hộp thoại xác nhận đăng xuất
     reactConfirmAlert({
       title: 'Xác nhận đăng xuất',
       message: 'Bạn có chắc chắn muốn đăng xuất?',
@@ -21,7 +20,6 @@ export default function Nav({ handleInputChange, query }) {
         {
           label: 'Có',
           onClick: () => {
-            // Chuyển hướng về trang đăng nhập khi xác nhận
             navigate('/');
             localStorage.setItem('isLogined', false)
           },
@@ -29,7 +27,6 @@ export default function Nav({ handleInputChange, query }) {
         {
           label: 'Không',
           onClick: () => {
-            // Không thực hiện hành động nếu người dùng chọn không đăng xuất
           },
         },
       ],

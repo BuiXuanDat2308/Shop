@@ -1,12 +1,64 @@
 .mini-product-admin {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    padding: 20px;
+    box-sizing: border-box;
     border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
+    /* Thêm border và chỉnh màu sắc theo ý muốn */
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /* Bo tròn góc nếu bạn muốn */
 }
 
-.mini-product-admin img {
-    max-width: 100%;
+.product-id {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.product-image {
+    max-width: 50px;
+    /* Kích thước ảnh nhỏ */
     height: auto;
-    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.product-price {
+    font-size: 16px;
+}
+
+.product-image-container {
+    flex: 0 0 auto;
+}
+.btn-miniad{
+    margin-left: auto;
+}
+.del-btn {
+    background-color: #d9534f;
+    /* Màu đỏ */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.del-btn:hover {
+    background-color: #c9302c;
+    
+}
+.edit-btn {
+    background-color: #5bc0de; /* Màu xanh dương */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 15px; /* Khoảng cách 15px với phần tử trước đó (nút Xóa) */
+}
+
+.edit-btn:hover {
+    background-color: #46b8da; /* Màu xanh dương nhạt khi hover */
 }
