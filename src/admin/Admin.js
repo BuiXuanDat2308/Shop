@@ -4,7 +4,7 @@ import MiniProductAdmin from './miniProductAdmin/MiniProductAdmin';
 import './Admin.css';
 import AddProductForm from './AddProductForm';
 import EditProductForm from './EditProductForm';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoLogOutOutline } from "react-icons/io5";
 import { confirmAlert as reactConfirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -26,6 +26,9 @@ function Admin() {
     category: '',
   });
   const [editProductId, setEditProductId] = useState(null);
+  // Phân trang
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(10);
 
   useEffect(() => {
     const dataitem1 = localStorage.getItem('data');
@@ -34,6 +37,7 @@ function Admin() {
   const handleSearchInputChange = (e) => {
     const { value } = e.target;
     setSearchTerm(value);
+    setCurrentPage(1);
   };
   const handleDelete = (id) => {
     const list = dataitem.filter((item) => item.id !== id);
@@ -155,15 +159,21 @@ function Admin() {
       ],
     });
   };
+  // Thêm hàm xử lý phân trang
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = searchProducts(searchTerm).slice(indexOfFirstProduct, indexOfLastProduct);
   return (
     <div>
       <div className="admin-navbar">
-       <div className='icon-admin'>
-       <Link>
-          <IoLogOutOutline onClick={handleLogout} className="nav-icons" />
-        </Link>
-       </div>
-        
+        <div className='icon-admin'>
+          <Link>
+            <IoLogOutOutline onClick={handleLogout} className="nav-icons" />
+          </Link>
+        </div>
+
       </div>
       <div className="admin-container">
         <div >
@@ -198,7 +208,7 @@ function Admin() {
           />
         )}
 
-        {searchProducts(searchTerm).map((item) => (
+        {currentProducts.map((item) => (
           <div className="admin-row" key={item.id}>
             <MiniProductAdmin
               id={item.id}
@@ -210,6 +220,17 @@ function Admin() {
             />
           </div>
         ))}
+        <div className="pagination">
+          {Array.from({ length: Math.ceil(searchProducts(searchTerm).length / productsPerPage) }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => paginate(index + 1)}
+              className={currentPage === index + 1 ? 'active' : ''}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
